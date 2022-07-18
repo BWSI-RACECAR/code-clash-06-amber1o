@@ -35,9 +35,9 @@ class Solution:
     def longestdistance(self, checkpoints):
         new_list = []
         for i in checkpoints:
-            new_list.append(checkpoints[1]-checkpoints[0])
-            new_list.append(checkpoints[2]-checkpoints[1])
-            new_list.append(checkpoints[3]-checkpoints[2])
+            new_list.append(abs(checkpoints[1]-checkpoints[0]))
+            new_list.append(abs(checkpoints[2]-checkpoints[1]))
+            new_list.append(abs(checkpoints[3]-checkpoints[2]))
         return max(new_list)
 
 def main():
