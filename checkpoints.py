@@ -28,17 +28,27 @@ Input: [10, 8, 4, 1] ; Output: 4
 Input: [5, 0, 3, 6] ; Output: 3
 """
 
+from array import array
+import re
 from tabnanny import check
 
 
 class Solution:
     def longestdistance(self, checkpoints):
-        new_list = []
-        for i in checkpoints:
-            new_list.append(abs(checkpoints[1]-checkpoints[0]))
-            new_list.append(abs(checkpoints[2]-checkpoints[1]))
-            new_list.append(abs(checkpoints[3]-checkpoints[2]))
-        return max(new_list)
+        def bubblesort(arr):
+            for i in range(0, len(arr)):
+                for j in range(0, len(arr)-1):
+                    if arr[j] > arr[j+1]
+                    temp = arr[j]
+                    arr[j] = arr[j+1]
+                    arr[j +1] = temp
+            return array
+        checkpoints = bubblesort(checkpoints)
+        distances=[]
+        for i in range(len(checkpoints)-1):
+            distances.append(checkpoints[i+1] - checkpoints[i])
+        distances = bubblesort(distances)
+        return distances[len(checkpoints)-2]
 
 def main():
     array = input().split(" ")
