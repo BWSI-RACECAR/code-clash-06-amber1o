@@ -33,23 +33,31 @@ import re
 from tabnanny import check
 
 
+
 class Solution:
     def longestdistance(self, checkpoints):
+        # type checkpoints: list
         def bubblesort(arr):
-            for i in range(0, len(arr)):
+            for i in range (0, len(arr)):
                 for j in range(0, len(arr)-1):
-                    if arr[j] > arr[j+1]:
+                    if arr[j] > arr [j + 1]:
                         temp = arr[j]
-                        arr[j] = arr[j+1]
-                        arr[j +1] = temp
-            return array
+                        arr[j] = arr[j +1]
+                        arr[j + 1] = temp
+            return arr
+        # return type: int
         checkpoints = bubblesort(checkpoints)
-        distances=[]
-        for i in range(len(checkpoints)-1):
-            distances.append(checkpoints[i+1] - checkpoints[i])
-        distances = bubblesort(distances)
-        return distances[len(checkpoints)-2]
 
+        distances = []
+
+        for i in range(len(checkpoints) - 1):
+            distances.append(checkpoints[i+1] - checkpoints[i])
+
+        distances = bubblesort(distances)
+        return distances[len(checkpoints) - 2] 
+        # TODO: Write code below to return an int with the solution to the prompt
+        pass
+    
 def main():
     array = input().split(" ")
     for x in range (0, len(array)):
