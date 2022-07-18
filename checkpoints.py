@@ -38,10 +38,10 @@ class Solution:
         def bubblesort(arr):
             for i in range(0, len(arr)):
                 for j in range(0, len(arr)-1):
-                    if arr[j] > arr[j+1]
-                    temp = arr[j]
-                    arr[j] = arr[j+1]
-                    arr[j +1] = temp
+                    if arr[j] > arr[j+1]:
+                        temp = arr[j]
+                        arr[j] = arr[j+1]
+                        arr[j +1] = temp
             return array
         checkpoints = bubblesort(checkpoints)
         distances=[]
